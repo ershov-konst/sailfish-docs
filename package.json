@@ -1,0 +1,8 @@
+{
+   "name": "sailfish-docs",
+   "version": "0.0.1",
+   "main": "./app.js",
+   "dependencies" : {
+      "sailfish": "git+https://github.com/ershov-konst/sailfish#master"
+   }
+}
