@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>{{=it.title}}</title>
+   <link rel="stylesheet" href="/views/main/css/styles.css"/>
+   {{=it.jsBlock}}
+</head>
+<body class="view-main">
+<div class="view-main__Content">
+   <div class="view-main__navBar">
+      <div class="view-main__navBar__ctn">
+         <a class="view-main__navBar__link" href="/home"><i class="view-main__navBar__img view-main__navBar__img-home"></i> На главную</a>
+         <a class="view-main__navBar__link" href="/quickstart"><i class="view-main__navBar__img view-main__navBar__img-qs"></i> Быстрый старт</a>
+         <a class="view-main__navBar__link" href="/docs"><i class="view-main__navBar__img view-main__navBar__img-docs"></i> Документация</a>
+         <a class="view-main__navBar__link" href="/api"><i class="view-main__navBar__img view-main__navBar__img-api"></i> API</a>
+      </div>
+   </div>
+   {{=it.content || ""}}
+</div>
+</body>
+</html>
