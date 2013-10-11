@@ -1,4 +1,4 @@
-define(["js!BaseComponent", "html!docs.DocPage"], function(BaseComponent, dotTplFn){
+define(["js!BaseComponent", "html!docs.DocPage", "js!docs.Sidebar"], function(BaseComponent, dotTplFn){
    var DocPage = BaseComponent.extend({
       _dotTplFn: dotTplFn,
       init: function(){
