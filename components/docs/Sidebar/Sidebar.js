@@ -1,4 +1,4 @@
-define(["js!CompoundComponent", "html!docs.Sidebar", "jQuery"], function(CompoundComponent, dotTplFn, $){
+define(["js!CompoundComponent", "html!docs.Sidebar", "jQuery", "css!docs.Sidebar"], function(CompoundComponent, dotTplFn, $){
 
    var Sidebar = CompoundComponent.extend({
       _dotTplFn: dotTplFn,

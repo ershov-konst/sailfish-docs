@@ -7,14 +7,14 @@
    }}
       <ul class="docs-Sidebar__list">
          <li class="docs-Sidebar__list-item docs-Sidebar__list-item__header">
-            <span>{{=menu.caption}}</span>
+            <span class="docs-Sidebar__span">{{=menu.caption}}</span>
          </li>
          {{
             if (submenu){
                for (var j = 0, len = submenu.length; j < len; j++){
          }}
          <li class="docs-Sidebar__list-item">
-            <a href="{{=submenu[j].link}}">{{=submenu[j].caption}}</a>
+            <a class="docs-Sidebar__link" href="{{=submenu[j].href}}">{{=submenu[j].caption}}</a>
          </li>
          {{
                }

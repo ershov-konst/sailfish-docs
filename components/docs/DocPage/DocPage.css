@@ -1,3 +1,7 @@
+.docs-DocPage__logo {
+  display: block;
+  height: 150px;
+}
 .doc-DocPage__left {
   float: left;
   width: 275px;
