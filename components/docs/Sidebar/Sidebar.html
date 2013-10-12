@@ -1,14 +1,25 @@
 <div class="docs-Sidebar">
-   {{ for(var i = 0, l = it.items.length; i < l; i++){ }}
+   {{
+      for(var i = 0, l = it.items.length; i < l; i++){
+         var
+            menu = it.items[i],
+            submenu = it.items[i].submenu;
+   }}
       <ul class="docs-Sidebar__list">
          <li class="docs-Sidebar__list-item docs-Sidebar__list-item__header">
-            <span>{{=it.items[i].caption}}</span>
+            <span>{{=menu.caption}}</span>
          </li>
-         {{ for (var j = it.items[i], len = it.items[i].length; j < len; j++){ }}
+         {{
+            if (submenu){
+               for (var j = 0, len = submenu.length; j < len; j++){
+         }}
          <li class="docs-Sidebar__list-item">
-            <a href="{{=it.items[i][j].link}}">{{=it.items[i][j].caption}}</a>
+            <a href="{{=submenu[j].link}}">{{=submenu[j].caption}}</a>
          </li>
-         {{ } }}
+         {{
+               }
+            }
+         }}
       </ul>
    {{ } }}
 </div>
