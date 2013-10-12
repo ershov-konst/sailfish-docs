@@ -1,4 +1,4 @@
-define(["js!CompoundComponent", "html!docs.DocPage", "js!docs.Sidebar"], function(CompoundComponent, dotTplFn){
+define(["js!CompoundComponent", "html!docs.DocPage", "js!docs.Sidebar", "css!docs.DocPage"], function(CompoundComponent, dotTplFn){
    var DocPage = CompoundComponent.extend({
       _dotTplFn: dotTplFn,
       init: function(){
