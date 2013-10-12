@@ -17,8 +17,21 @@
 }
 .view-main__navBar__link{
    color: #fff;
+   display: inline-block;
    text-decoration: none;
    line-height: 45px;
+   height: 45px;
    font-size: 17px;
    padding: 0 10px;
+}
+.view-main__navBar__link:hover{
+   background-color: #336666;
+}
+.view-main__navBar__icon{
+   vertical-align: middle;
+   margin-top: -3px;
+}
+.view-main__contentWrapper{
+   width: 1100px;
+   margin: 0 auto;
 }
