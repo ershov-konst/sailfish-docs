@@ -11,7 +11,8 @@ define(["js!CompoundComponent", "html!docs.DocPage", "jQuery", "js!docs.Sidebar"
 
          $(window).bind("popstate", function(e){
             var oE = e.originalEvent;
-            menu.setActive(oE.state.link);
+            menu.markAsActive(oE.state.link);
+            self.showPage(oE.state.link);
          });
 
          menu.on("click", function(link){

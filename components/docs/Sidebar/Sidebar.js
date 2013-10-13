@@ -17,9 +17,13 @@ define(["js!BaseComponent", "html!docs.Sidebar", "jQuery", "css!docs.Sidebar"], 
       },
       setActive: function(href){
          var target = this._links.filter("[href='"+ href +"']");
+         this.markAsActive(href);
+         this.trigger("click", target[0]);
+      },
+      markAsActive: function(href){
+         var target = this._links.filter("[href='"+ href +"']");
          this._links.removeClass("docs-Sidebar__link__active");
          target.addClass("docs-Sidebar__link__active");
-         this.trigger("click", target[0]);
       }
    });
 
