@@ -3,7 +3,7 @@
       <a class="docs-DocPage__logo">
 
       </a>
-      <component data-component="docs.Sidebar" name="Menu">
+      <component data-component="docs.Sidebar" name="menu">
          <options name="items" type="array">
             <options caption="Быстрый старт">
                <options name="submenu" type="array">
@@ -30,6 +30,8 @@
       </component>
    </div>
    <div class="doc-DocPage__right">
-
+      <component data-component="docs.DocView" name="md">
+         <option name="markdown">{{=it.markdown}}</option>
+      </component>
    </div>
 </div>

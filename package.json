@@ -3,6 +3,7 @@
    "version": "0.0.1",
    "main": "./app.js",
    "dependencies" : {
+      "node-markdown" : "latest",
       "sailfish": "git+https://github.com/ershov-konst/sailfish#master"
    }
 }
