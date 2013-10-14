@@ -2,6 +2,9 @@ define(["js!BaseComponent", "html!docs.Sidebar", "jQuery", "css!docs.Sidebar"], 
 
    var Sidebar = BaseComponent.extend({
       _dotTplFn: dotTplFn,
+      _options:{
+         activeLink : null
+      },
       _links: [],
       init: function(){
          var self = this;

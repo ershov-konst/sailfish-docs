@@ -24,9 +24,7 @@ module.exports = {
    index : function(req, res){
       res.render("main", {
          title : "sailfish.js",
-         content : new Component("docs.DocPage", {
-            caption : "Hello world"
-         })
+         content : new Component("docs.DocPage")
       });
    },
    getMarkup: function(req, res){
@@ -36,6 +34,22 @@ module.exports = {
          }
          else{
             res.send(txt)
+         }
+      });
+   },
+   api: function(req, res){
+      getMarkup(req.originalUrl, function(e, txt){
+         if (e){
+            res.send(404);
+         }
+         else{
+            res.render("main", {
+               title : "sailfish.js",
+               content : new Component("docs.DocPage", {
+                  activeLink: req.originalUrl,
+                  markdown: txt
+               })
+            });
          }
       });
    }

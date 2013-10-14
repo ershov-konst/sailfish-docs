@@ -12,9 +12,10 @@
          {{
             if (submenu){
                for (var j = 0, len = submenu.length; j < len; j++){
+                  var isActive = submenu[j].href === it.activeLink;
          }}
          <li class="docs-Sidebar__list-item">
-            <a class="docs-Sidebar__link" href="{{=submenu[j].href}}">{{=submenu[j].caption}}</a>
+            <a class="docs-Sidebar__link {{? isActive}}docs-Sidebar__link__active{{?}}" href="{{=submenu[j].href}}">{{=submenu[j].caption}}</a>
          </li>
          {{
                }
