@@ -5,8 +5,7 @@ html, body{
    min-height: 100%;
    margin: 0;
    padding: 0;
-   /*background: url("/views/main/img/old_wall.png") repeat;*/
-   background-color: #e0dfaf;
+   background: url("/views/main/img/ricepaper_v3.png") repeat;
    font-family: Arial, Helvetica, sans-serif;
 }
 .view-main__content{
