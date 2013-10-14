@@ -21,8 +21,13 @@ define(["js!CompoundComponent", "html!docs.DocPage", "jQuery", "js!docs.Sidebar"
 
          menu.on("click", function(link){
             var l = link.target.getAttribute("href");
-            self.showPage(l);
-            window.history.pushState({link : l}, "", l);
+            if (window.history){
+               self.showPage(l);
+               window.history.pushState({link : l}, "", l);
+            }
+            else{
+               window.location = link;
+            }
          })
       },
       showPage: function(url){
