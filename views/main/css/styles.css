@@ -1,15 +1,28 @@
+html, body{
+   min-height: 100%;
+}
 .view-main{
-   height: 100%;
+   min-height: 100%;
    margin: 0;
    padding: 0;
    /*background: url("/views/main/img/old_wall.png") repeat;*/
    background-color: #e0dfaf;
    font-family: Arial, Helvetica, sans-serif;
 }
+.view-main__content{
+   min-height: 100%;
+}
+.view-main__contentWrapper{
+   padding: 45px 0;
+   margin-top: -45px;
+}
 .view-main__navBar{
    height: 45px;
    background-color: #579594;
    color: #ffffff;
+}
+.view-main__footer .view-main__navBar{
+   background-color: red;
 }
 .view-main__navBar__ctn{
    width: 1100px;
@@ -28,6 +41,9 @@
 .view-main__navBar__link:hover{
    background-color: #336666;
 }
+.view-main__footer .view-main__navBar__link:hover{
+   background-color: white;
+}
 .view-main__navBar__icon{
    vertical-align: middle;
    margin-top: -3px;
@@ -35,4 +51,7 @@
 .view-main__contentWrapper{
    width: 1100px;
    margin: 0 auto;
+}
+.view-main__footer{
+   margin-top: -45px;
 }
