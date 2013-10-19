@@ -20,6 +20,23 @@ function getMarkup(url, cb){
    });
 }
 
+function sendRes(req, res){
+   getMarkup(req.originalUrl, function(e, txt){
+      if (e){
+         res.send(404);
+      }
+      else{
+         res.render("main", {
+            title : "sailfish.js",
+            content : new Component("docs.DocPage", {
+               activeLink: req.originalUrl,
+               markdown: txt
+            })
+         });
+      }
+   });
+}
+
 module.exports = {
    index : function(req, res){
       res.render("main", {
@@ -37,20 +54,7 @@ module.exports = {
          }
       });
    },
-   api: function(req, res){
-      getMarkup(req.originalUrl, function(e, txt){
-         if (e){
-            res.send(404);
-         }
-         else{
-            res.render("main", {
-               title : "sailfish.js",
-               content : new Component("docs.DocPage", {
-                  activeLink: req.originalUrl,
-                  markdown: txt
-               })
-            });
-         }
-      });
-   }
+   api: sendRes,
+   qs: sendRes,
+   docs: sendRes
 };
