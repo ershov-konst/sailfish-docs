@@ -1,4 +1,4 @@
-define(["js!CompoundComponent", "html!docs.DocPage", "jQuery", "js!docs.Sidebar", "css!docs.DocPage", "js!docs.DocView"], function(CompoundComponent, dotTplFn, $){
+define("js!docs.DocPage", ["js!CompoundComponent", "html!docs.DocPage", "jquery", "js!docs.Sidebar", "css!docs.DocPage", "js!docs.DocView"], function(CompoundComponent, dotTplFn, $){
    var DocPage = CompoundComponent.extend({
       _dotTplFn: dotTplFn,
       _options: {

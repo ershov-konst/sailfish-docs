@@ -1,4 +1,4 @@
-define(["js!BaseComponent", "html!docs.DocView", "jQuery", "css!docs.DocView"], function(BaseComponent, dotTplFn, $){
+define("js!docs.DocView", ["js!BaseComponent", "html!docs.DocView", "jquery", "css!docs.DocView"], function(BaseComponent, dotTplFn, $){
 
    var DocView = BaseComponent.extend({
       _options: {
