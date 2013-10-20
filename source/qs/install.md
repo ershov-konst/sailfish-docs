@@ -19,12 +19,12 @@
 ### Конфигурация приложения (package.json)
 
 Структуры файла `package.json` подробно описана [тут](https://npmjs.org/doc/json.html).
-Все что нам нужно, это указать в разделе `dependencies` модуль `sailfish`
+Все что нам нужно сейчас - это указать в разделе `dependencies` модуль `sailfish`
 
 Пример:
 
     {
-        "name": "sailfish-docs",
+        "name": "my-sailfish-app",
         "version": "0.0.1",
         "main": "./app.js",
         "dependencies" : {
@@ -32,8 +32,43 @@
         }
     }
 
-### Основной файл приложения
+далее выполняем установку модулей
 
+    npm install
 
+### Конфигурация фреймворка (config.json)
 
-### Конфигурация приложения
+Для запуска приложения необходимо задать конфигурцию `sailfish`. Для хранения конфигурации удобно использовать отдельный файл.
+В нашем примере это файл `config.json`:
+
+    {
+       "port": 777,
+       "controllers": "./controllers",
+       "components": "./components",
+       "views": "./views"
+    }
+
+Необходимо указать порт, который будет слушать приложение, а так же расположение директорий компонентов,
+html-шаблонов страниц и серверных контроллеров, как указано на примере выше.
+
+### Основной файл приложения (app.js)
+
+    var
+       sailfish = require("sailfish").server,
+       config = require("./config.json");
+
+    config["rootPath"] = __dirname;
+
+    sailfish.run(config);
+
+    sailfish.on("error", function(err, req, res){
+       console.log(err);
+       if (err.code){
+          res.send(err.code);
+       }
+       else{
+          console.log("another");
+       }
+    });
+
+ //TODO тут описание что и зачем
