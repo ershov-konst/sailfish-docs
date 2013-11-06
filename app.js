@@ -1,11 +1,19 @@
-var sailfish = require("sailfish").server;
-var config = require("./config.json");
+var
+   Sailfish = require("sailfish").Sailfish,
+   config = require("./config.json"),
+   server;
 
 config["rootPath"] = __dirname;
+config["port"] = 777;
 
-sailfish.run(config);
 
-sailfish.on("error", function(err, req, res){
+server = new Sailfish(config);
+
+server.on("start", function(){
+   console.log("onStart");
+});
+
+server.on("error", function(err, req, res){
    console.log(err);
    if (err.code){
       res.send(err.code);
