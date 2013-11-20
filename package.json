@@ -4,6 +4,6 @@
    "main": "./app.js",
    "dependencies" : {
       "node-markdown" : "latest",
-      "sailfish": "git+https://github.com/ershov-konst/sailfish#master"
+      "sailfish": "0.0.2"
    }
 }
