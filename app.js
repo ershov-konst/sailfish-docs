@@ -4,7 +4,7 @@ var
    server;
 
 config["rootPath"] = __dirname;
-config["port"] = process.env.PORT || 777;
+config["port"] = process.env.PORT || 10000;
 
 
 server = new Sailfish(config);
