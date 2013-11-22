@@ -1,6 +1,6 @@
 var
    Component = require("sailfish").Component,
-   md = require("node-markdown").Markdown,
+   marked = require("marked"),
    path = require("path"),
    fs = require("fs");
 
@@ -15,7 +15,7 @@ function getMarkup(url, cb){
          cb(e);
       }
       else{
-         cb(null, md(text));
+         cb(null, marked(text));
       }
    });
 }
