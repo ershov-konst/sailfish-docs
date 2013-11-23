@@ -41,7 +41,7 @@
 Для запуска приложения необходимо задать конфигурцию `sailfish`.
 Пример:
 
-    new Sailfish({
+    var server = new Sailfish({
        "rootPath": __dirname,
        "controllers": "./controllers",
        "components": "./components",
