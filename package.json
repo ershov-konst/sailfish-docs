@@ -4,6 +4,6 @@
    "main": "./app.js",
    "dependencies" : {
       "marked" : "latest",
-      "sailfish": "0.0.2"
+      "sailfish": "latest"
    }
 }

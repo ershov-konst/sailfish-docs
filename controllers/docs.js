@@ -14,3 +14,20 @@ module.exports = {
 
    }
 };
+
+
+
+
+
+
+module.exports = {
+   index: function(req, res){
+
+   },
+   edit: function(req, res){
+
+   },
+   del: function(req, res){
+
+   }
+};
