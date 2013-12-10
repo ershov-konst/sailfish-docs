@@ -28,7 +28,7 @@
         "version": "0.0.1",
         "main": "./app.js",
         "dependencies" : {
-            "sailfish": "0.0.2"
+            "sailfish": "0.0.x"
         }
     }
 
@@ -46,7 +46,7 @@
        "controllers": "./controllers",
        "components": "./components",
        "views": "./views",
-       "port": 777
+       "port": 10001
     });
 
 Необходимо указать порт, который будет слушать приложение, а так же расположение директорий компонентов,
@@ -59,7 +59,7 @@ html-шаблонов страниц и серверных контроллер�
        Sailfish = require("sailfish").Sailfish,
        server;
 
-    new Sailfish({
+    server = new Sailfish({
        "rootPath": __dirname,
        "controllers": "./controllers",
        "components": "./components",
