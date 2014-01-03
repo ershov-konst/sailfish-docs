@@ -35,23 +35,28 @@ function getMarkup(url, cb){
    }
    if (/api\/classes/.test(url)){
       docs('./node_modules/sailfish/sf_client/lib', function(err, docObject){
-         fs.readFile(path.join(tplPath, 'docs.dot'), 'utf8', function(err, template){
-            if (!err){
-               try{
-                  var
-                     dotTplFn = dot.template(template, null, dotDef),
-                     txt = marked(dotTplFn(docObject));
-                  markupCache[url] = txt;
-                  cb(null, txt);
+         if (!err){
+            fs.readFile(path.join(tplPath, 'docs.dot'), 'utf8', function(err, template){
+               if (!err){
+                  try{
+                     var
+                        dotTplFn = dot.template(template, null, dotDef),
+                        txt = marked(dotTplFn(docObject));
+                     markupCache[url] = txt;
+                     cb(null, txt);
+                  }
+                  catch (e){
+                     cb(null, e.message);
+                  }
                }
-               catch (e){
-                  cb(null, e.message);
+               else{
+                  cb(null, err.message);
                }
-            }
-            else{
-               cb(null, err.message);
-            }
-         });
+            });
+         }
+         else{
+            cb(null, err.message);
+         }
       });
    }
    else{
