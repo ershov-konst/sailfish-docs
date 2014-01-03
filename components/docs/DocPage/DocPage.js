@@ -19,8 +19,8 @@ define("js!docs.DocPage", ["js!CompoundComponent", "html!docs.DocPage", "jquery"
             self.showPage(oE.state.link);
          });
 
-         menu.on("click", function(link){
-            var l = link.target.getAttribute("href");
+         menu.on("click", function(event, link){
+            var l = link.getAttribute("href");
             if (window.history){
                self.showPage(l);
                window.history.pushState({link : l}, "", l);
