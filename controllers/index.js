@@ -34,7 +34,7 @@ function getMarkup(url, cb){
       return;
    }
    if (/api\/classes/.test(url)){
-      docs('./node_modules/sailfish/sf_client/lib', function(err, docObject){
+      docs(path.resolve(__dirname, '../node_modules/sailfish/sf_client/lib'), function(err, docObject){
          if (!err){
             fs.readFile(path.join(tplPath, 'docs.dot'), 'utf8', function(err, template){
                if (!err){
