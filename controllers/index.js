@@ -46,16 +46,16 @@ function getMarkup(url, cb){
                      cb(null, txt);
                   }
                   catch (e){
-                     cb(null, e.message);
+                     cb(e);
                   }
                }
                else{
-                  cb(null, err.message);
+                  cb(err);
                }
             });
          }
          else{
-            cb(null, err.message);
+            cb(err);
          }
       });
    }
@@ -78,6 +78,7 @@ function sendRes(req, res){
    getMarkup(req.originalUrl, function(e, txt){
       if (e){
          res.send(404);
+         throw e;
       }
       else{
          res.render("main", {

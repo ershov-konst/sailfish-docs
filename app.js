@@ -19,6 +19,6 @@ server.on("error", function(err, req, res){
       res.send(err.code);
    }
    else{
-      console.log("another");
+      console.log(err);
    }
 });
