@@ -1,0 +1,7 @@
+## Базовые классы
+{{~it.namespaces :item}}
+{{#def.include('class.dot')}}
+{{~}}
+{{~it.classes :item}}
+{{#def.include('class.dot')}}
+{{~}}
