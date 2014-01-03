@@ -1,6 +1,6 @@
 {
    "name": "sailfish-docs",
-   "version": "0.0.6",
+   "version": "0.0.7",
    "main": "./app.js",
    "dependencies" : {
       "jsdoc" : "3.3.0-alpha3",
