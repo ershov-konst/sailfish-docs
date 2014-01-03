@@ -18,7 +18,8 @@ var
          }
          return result;
       }
-   };
+   },
+   markupCache = {};
 
 dot.templateSettings.strip = false;
 
@@ -28,17 +29,20 @@ dot.templateSettings.strip = false;
  * @param cb
  */
 function getMarkup(url, cb){
+   if (url in markupCache){
+      cb(null, markupCache[url]);
+      return;
+   }
    if (/api\/classes/.test(url)){
       docs('./node_modules/sailfish/sf_client/lib', function(err, docObject){
          fs.readFile(path.join(tplPath, 'docs.dot'), 'utf8', function(err, template){
             if (!err){
-               var
-                  dotTplFn,
-                  txt;
                try{
-                  dotTplFn = dot.template(template, null, dotDef);
-                  txt = dotTplFn(docObject);
-                  cb(null, marked(txt));
+                  var
+                     dotTplFn = dot.template(template, null, dotDef),
+                     txt = marked(dotTplFn(docObject));
+                  markupCache[url] = txt;
+                  cb(null, txt);
                }
                catch (e){
                   cb(null, e.message);
@@ -51,12 +55,15 @@ function getMarkup(url, cb){
       });
    }
    else{
-      fs.readFile("./source/" + url + ".md", "utf8", function(e, text){
+      fs.readFile("./source/" + url + ".md", "utf8", function(e, file){
+         var text;
          if (e){
             cb(e);
          }
          else{
-            cb(null, marked(text));
+            text = marked(file);
+            markupCache[url] = text;
+            cb(null, text);
          }
       });
    }
