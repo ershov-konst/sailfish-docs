@@ -21,8 +21,6 @@ var
    },
    markupCache = {};
 
-dot.templateSettings.strip = false;
-
 /**
  * returns html
  * @param {String} url for example api/1

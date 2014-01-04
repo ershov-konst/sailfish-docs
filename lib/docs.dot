@@ -1,4 +1,4 @@
-## Базовые классы
+<h2>Базовые классы</h2>
 {{~it.namespaces :item}}
 {{#def.include('class.dot')}}
 {{~}}

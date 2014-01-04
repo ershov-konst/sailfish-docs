@@ -1,20 +1,19 @@
-<h2 class="docs-h2"><a href="#m~{{=item.name}}" class="docs-anchor" id="m~{{=item.name}}">{{=item.name}}</a></h2>
-{{? item.description}}**Description:** {{=item.description}}{{?}}
-
+<h2 class='docs-h2'><a href='#m~{{=item.name}}' class='docs-anchor' id='m~{{=item.name}}'>{{=item.name}}</a></h2>
+{{? item.description}}<strong>Description:</strong> {{=item.description}}{{?}}
 {{~item.functions :fn}}
-<div class="docs-method">
-<div class="docs-method__fn">
-<a href="#{{=item.name}}~{{=fn.name}}" class="docs-anchor" id="{{=item.name}}~{{=fn.name}}">
-.{{=fn.name}}( {{=fn.parameters.map(function(elem){return elem.name;}).join(", ")}} )
+<div class='docs-method'>
+<div class='docs-method__fn'>
+<a href='#{{=item.name}}~{{=fn.name}}' class='docs-anchor' id='{{=item.name}}~{{=fn.name}}'>
+.{{=fn.name}}( {{=fn.parameters.map(function(elem){return elem.name;}).join(', ')}} )
 </a>
 </div>
-<div class="docs-method__desc">
+<div class='docs-method__desc'>
 {{=fn.description}}
-<div class="doc-method__params">
+<div class='doc-method__params'>
    {{~fn.parameters :param}}
-<div class="doc-method__param">
-**{{=param.name}}**<br/>
-{{? param.type}}Type: _{{=param.type}}_<br/>{{?}}
+<div class='doc-method__param'>
+<strong>{{=param.name}}</strong><br/>
+{{? param.type}}Type: <em>{{=param.type}}</em><br/>{{?}}
 {{=param.description}}
 </div>
    {{~}}
