@@ -13,7 +13,7 @@
    {{~fn.parameters :param}}
 <div class='doc-method__param'>
 <strong>{{=param.name}}</strong><br/>
-{{? param.type}}Type: <em>{{=param.type}}</em><br/>{{?}}
+{{? param.type}}Type: <i>{{? param.type=='*'}}Anything{{??}}{{=param.type}}{{?}}</i><br/>{{?}}
 {{=param.description}}
 </div>
    {{~}}
