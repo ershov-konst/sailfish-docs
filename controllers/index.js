@@ -27,7 +27,7 @@ var
  * @param cb
  */
 function getMarkup(url, cb){
-   if (url in markupCache){
+   if (false/*url in markupCache*/){
       cb(null, markupCache[url]);
       return;
    }

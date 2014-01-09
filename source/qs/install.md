@@ -19,7 +19,7 @@
 ### Конфигурация приложения (package.json)
 
 Структура файла `package.json` подробно описана [тут](https://npmjs.org/doc/json.html).
-Все что нам нужно сейчас - это указать в разделе `dependencies` модуль `sailfish`
+Все что нам нужно сейчас - это указать в разделе `dependencies` nodejs модуль `sailfish`
 
 Пример:
 
