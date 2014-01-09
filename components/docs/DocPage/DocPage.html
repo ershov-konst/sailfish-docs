@@ -4,35 +4,35 @@
 
       </a>
       <component data-component="docs.Sidebar" name="menu">
-         <option name="activeLink">{{=it.activeLink}}</option>
-         <options name="items" type="array">
-            <options caption="Быстрый старт">
-               <options name="submenu" type="array">
-                  <options caption="Установка" href="/qs/install"></options>
-                  <options caption="Hello world" href="/qs/helloworld"></options>
-               </options>
-            </options>
-            <options caption="Документация">
-               <options name="submenu" type="array">
-                  <options caption="HTML шаблоны" href="/docs/templates"></options>
-                  <options caption="Компоненты" href="/docs/components"></options>
-                  <options caption="Маршрутизация" href="/docs/routing"></options>
-                  <options caption="Рекомендации по именованию классов" href="/docs/css"></options>
-               </options>
-            </options>
-            <options caption="API">
-               <options name="submenu" type="array">
-                  <options caption="Конфигурация" href="/api/config"></options>
-                  <options caption="События" href="/api/events"></options>
-                  <options caption="Базовые классы" href="/api/classes"></options>
-               </options>
-            </options>
-         </options>
+         <o name="activeLink">{{=it.activeLink}}</o>
+         <o name="items" type="array">
+            <o caption="Быстрый старт" type="object">
+               <o name="submenu" type="array">
+                  <o type="object" caption="Установка" href="/qs/install"></o>
+                  <o type="object" caption="Hello world" href="/qs/helloworld"></o>
+               </o>
+            </o>
+            <o type="object" caption="Документация">
+               <o name="submenu" type="array">
+                  <o type="object" caption="HTML шаблоны" href="/docs/templates"></o>
+                  <o type="object" caption="Компоненты" href="/docs/components"></o>
+                  <o type="object" caption="Маршрутизация" href="/docs/routing"></o>
+                  <o type="object" caption="Рекомендации по именованию классов" href="/docs/css"></o>
+               </o>
+            </o>
+            <o caption="API" type="object">
+               <o name="submenu" type="array">
+                  <o type="object" caption="Конфигурация" href="/api/config"></o>
+                  <o type="object" caption="События" href="/api/events"></o>
+                  <o type="object" caption="Базовые классы" href="/api/classes"></o>
+               </o>
+            </o>
+         </o>
       </component>
    </div>
    <div class="doc-DocPage__right">
       <component data-component="docs.DocView" name="md">
-         <option name="markdown">{{=it.markdown}}</option>
+         <o name="markdown">{{=it.markdown}}</o>
       </component>
    </div>
    <div class="doc-DocPage__clearHelper"></div>
