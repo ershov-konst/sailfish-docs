@@ -6,13 +6,15 @@
       <component data-component="docs.Sidebar" name="menu">
          <o name="activeLink">{{=it.activeLink}}</o>
          <o name="items" type="array">
-            <o caption="Быстрый старт" type="object">
+            <o type="object">
+               <o name="caption">Быстрый старт</o>
                <o name="submenu" type="array">
                   <o type="object" caption="Установка" href="/qs/install"></o>
                   <o type="object" caption="Hello world" href="/qs/helloworld"></o>
                </o>
             </o>
-            <o type="object" caption="Документация">
+            <o type="object">
+               <o name="caption">Документация</o>
                <o name="submenu" type="array">
                   <o type="object" caption="HTML шаблоны" href="/docs/templates"></o>
                   <o type="object" caption="Компоненты" href="/docs/components"></o>
@@ -20,7 +22,8 @@
                   <o type="object" caption="Рекомендации по именованию классов" href="/docs/css"></o>
                </o>
             </o>
-            <o caption="API" type="object">
+            <o type="object">
+               <o name="caption">API</o>
                <o name="submenu" type="array">
                   <o type="object" caption="Конфигурация" href="/api/config"></o>
                   <o type="object" caption="События" href="/api/events"></o>
