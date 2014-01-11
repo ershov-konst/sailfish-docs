@@ -1,24 +1,10 @@
 var
-   Sailfish = require("sailfish").Sailfish,
+   express = require('express'),
+   sailfish = require('sailfish'),
    config = require("./config.json"),
-   server;
+   app;
 
-config["rootPath"] = __dirname;
-config["port"] = process.env.PORT || 10001;
+app = sailfish(express, config);
 
-
-server = new Sailfish(config);
-
-server.on("start", function(){
-   console.log("onStart");
-});
-
-server.on("error", function(err, req, res){
-   console.log(err);
-   if (err.code){
-      res.send(err.code);
-   }
-   else{
-      console.log(err);
-   }
-});
+app.listen(process.env.PORT || 10001);
+console.log('application running on localhost:' + (process.env.PORT || 10001));
