@@ -6,7 +6,7 @@
       "express": "latest",
       "jsdoc" : "3.3.0-alpha3",
       "marked" : "latest",
-      "sailfish": "git://github.com/ershov-konst/sailfish.git",
+      "sailfish": "0.0.9",
       "dot": "latest"
    }
 }

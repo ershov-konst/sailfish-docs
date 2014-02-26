@@ -4,36 +4,36 @@
 
       </a>
       <component data-component="docs.Sidebar" name="menu">
-         <o name="activeLink">{{=it.activeLink}}</o>
-         <o name="items" type="array">
+         <activeLink>{{=it.activeLink}}</activeLink>
+         <items type="array">
             <o type="object">
-               <o name="caption">Быстрый старт</o>
-               <o name="submenu" type="array">
+               <caption>Быстрый старт</caption>
+               <submenu type="array">
                   <o type="object" caption="Установка" href="/qs/install"></o>
                   <o type="object" caption="Пример использования" href="/qs/example"></o>
-               </o>
+               </submenu>
             </o>
             <o type="object">
-               <o name="caption">Документация</o>
-               <o name="submenu" type="array">
+               <caption>Документация</caption>
+               <submenu type="array">
                   <o type="object" caption="Компоненты" href="/docs/components"></o>
                   <o type="object" caption="Конфигурирование компонентов" href="/docs/css"></o>
                   <o type="object" caption="Маршрутизация" href="/docs/routing"></o>
-               </o>
+               </submenu>
             </o>
             <o type="object">
-               <o name="caption">API</o>
-               <o name="submenu" type="array">
+               <caption>API</caption>
+               <submenu type="array">
                   <o type="object" caption="Конфигурация" href="/api/config"></o>
                   <o type="object" caption="Базовые классы" href="/api/classes"></o>
-               </o>
+               </submenu>
             </o>
-         </o>
+         </items>
       </component>
    </div>
    <div class="doc-DocPage__right">
       <component data-component="docs.DocView" name="md">
-         <o name="markdown">{{=it.markdown}}</o>
+         <markdown>{{=it.markdown}}</markdown>
       </component>
    </div>
    <div class="doc-DocPage__clearHelper"></div>
