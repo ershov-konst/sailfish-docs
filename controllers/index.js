@@ -76,7 +76,6 @@ function sendRes(req, res){
    getMarkup(req.originalUrl, function(e, txt){
       if (e){
          res.send(404);
-         throw e;
       }
       else{
          res.render("main", {
