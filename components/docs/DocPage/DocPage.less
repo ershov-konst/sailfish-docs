@@ -1,7 +1,18 @@
 .docs-DocPage__logo{
    display: block;
-   height: 150px;
+   background: url("./img/sailfish-side.png") no-repeat;
+   width: 265px;
+   height: 230px;
+   margin-top: -35px;
+   margin-bottom: -40px;
 }
+@media (-webkit-min-device-pixel-ratio: 2) {
+   .docs-DocPage__logo {
+      background-image: url("./img/sailfish-side@x2.png");
+      background-size: cover;
+   }
+}
+
 .doc-DocPage__left{
    float: left;
    width: 276px;
