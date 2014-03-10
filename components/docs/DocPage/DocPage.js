@@ -2,6 +2,7 @@ define("js!docs.DocPage", ["js!CompoundComponent", "html!docs.DocPage", "jquery"
    var DocPage = CompoundComponent.extend({
       _dotTplFn: dotTplFn,
       _options: {
+         isIndexPage: false,
          activeLink: "",
          markdown: ""
       },
@@ -15,8 +16,13 @@ define("js!docs.DocPage", ["js!CompoundComponent", "html!docs.DocPage", "jquery"
 
          $(window).bind("popstate", function(e){
             var oE = e.originalEvent;
-            menu.markAsActive(oE.state.link);
-            self.showPage(oE.state.link);
+            if (oE.state){
+               menu.markAsActive(oE.state.link);
+               self.showPage(oE.state.link);
+            }
+            else{
+               window.location = '/';
+            }
          });
 
          menu.on("click", function(event, link){
@@ -40,6 +46,13 @@ define("js!docs.DocPage", ["js!CompoundComponent", "html!docs.DocPage", "jquery"
                md.setMarkdown(e.responseText);
             }
          });
+         this._markAsIndexPage(false);
+      },
+      _markAsIndexPage: function(flag){
+         if (this._options.isIndexPage != flag){
+            this._options.isIndexPage = flag;
+            $(this._container).toggleClass('docs-DocPage__indexPage', flag);
+         }
       }
    });
 

@@ -89,11 +89,20 @@ function sendRes(req, res){
    });
 }
 
+function getIndexHTML(cb){
+
+}
+
 module.exports = {
    index : function(req, res){
-      res.render("main", {
-         title : "sailfish.js",
-         content : new Component("docs.DocPage")
+      fs.readFile("./source/index/index.html", "utf8", function(e, text){
+         res.render("main", {
+            title : "sailfish.js",
+            content : new Component("docs.DocPage", {
+               isIndexPage: true,
+               markdown: e || text
+            })
+         });
       });
    },
    getMarkup: function(req, res){
