@@ -6,8 +6,11 @@ var
 
 app = sailfish(express, config);
 
+app.use(sailfish.baseRouting());
+
 app.use(function(err, req, res, next){
    console.log('caught error\n' + err);
+   console.log(err.stack);
    next();
 });
 
