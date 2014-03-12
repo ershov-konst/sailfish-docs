@@ -95,14 +95,9 @@ function getIndexHTML(cb){
 
 module.exports = {
    index : function(req, res){
-      fs.readFile("./source/index/index.html", "utf8", function(e, text){
-         res.render("main", {
-            title : "sailfish.js",
-            content : new Component("docs.DocPage", {
-               isIndexPage: true,
-               markdown: e || text
-            })
-         });
+      res.render("main", {
+         title : "sailfish.js",
+         content : new Component("docs.DocPage", {isIndexPage: true})
       });
    },
    getMarkup: function(req, res){
