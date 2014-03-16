@@ -10,6 +10,7 @@ html, body{
 }
 .view-main__content{
    min-height: 100%;
+   height: 1px;
 }
 .view-main__navBar{
    height: 45px;
@@ -46,7 +47,8 @@ html, body{
 .view-main__contentWrapper{
    width: 1100px;
    margin: -45px auto 0;
-   padding: 45px 0;
+   min-height: 100%;
+   position: relative;
 }
 .view-main__footer{
    margin-top: -45px;
@@ -54,6 +56,7 @@ html, body{
 .view-main__navBar__leftSide{
    float: left;
    line-height: 45px;
+   padding: 0 10px;
 }
 .view-main__navBar__simpleLink{
    color: #fff;
@@ -61,4 +64,19 @@ html, body{
 }
 .view-main__navBar__simpleLink:hover{
    text-decoration: underline;
+}
+.view-main__whitePage{
+   width: 823px;
+   background-color: #ffffff;
+   border: solid #a4baa3;
+   border-width: 0 1px;
+   position: absolute;
+   right: 0;
+   top: 45px;
+   bottom: 45px;
+}
+
+.view-main__contentWrapper .docs-DocPage{
+   position: relative;
+   z-index: 1;
 }

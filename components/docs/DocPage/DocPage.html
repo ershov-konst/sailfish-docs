@@ -30,12 +30,10 @@
       </component>
    </div>
    <div class="doc-DocPage__right">
-      <div class="doc-DocPage__white">
-         <component data-component="docs.MainPage" class="doc-DocPage__mainPageContent" name="mainPage"></component>
-         <component data-component="docs.DocView" class="doc-DocPage__docContent" name="md">
-            <markdown>{{=it.markdown || ' '}}</markdown>
-         </component>
-      </div>
+      <component data-component="docs.MainPage" class="doc-DocPage__mainPageContent" name="mainPage"></component>
+      <component data-component="docs.DocView" class="doc-DocPage__docContent" name="md">
+         <markdown>{{=it.markdown || ' '}}</markdown>
+      </component>
    </div>
    <div class="doc-DocPage__clearHelper"></div>
 </div>
