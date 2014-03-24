@@ -107,11 +107,11 @@ html файл должен находиться в папке компонент
     <div class="test-TestCompoundComponent">
       ...
       <component data-component="docs-Sidebar">
-         <items type="array">
-            <item type="object">
+         <items:array>
+            <item:object>
                <caption>Пункт меню</caption>
-               <submenu type="array">
-                  <item type="object">
+               <submenu:array>
+                  <item:object>
                      <caption>Пункт подменю</caption>
                      <link>/link/to/something</link>
                   </item>

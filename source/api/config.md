@@ -1,25 +1,19 @@
 ## Конфигурация
 
+Конфигурация фреймворка осуществляется с помощью следующий параметров:
+
 #### rooPath
 `{String}`
 
-Расположение папки с корнем приложения
+Расположение корня приложения (по умолчанию `./`)
 
     "rootPath": "/var/www/myApplication"
-***
-
-#### controllers
-`{String}`
-
-Расположение папки с контроллерами для проложения (относительно `rootPath`)
-
-    "controllers": "./controllers"
 ***
 
 #### components
 `{String}`
 
-Расположение папки с компонентами проложения (относительно `rootPath`)
+Расположение папки с компонентами проложения (относительно `rootPath`, по умолчанию `./components`)
 
     "components": "./components"
 ***
@@ -27,29 +21,12 @@
 #### views
 `{String}`
 
-Расположение папки с html шаблонами (относительно `rootPath`)
+Расположение папки с html шаблонами (относительно `rootPath`, по умолчанию `./views`)
 
     "views": "./views"
 ***
 
-
-#### port
-`{Number}`
-
-Порт, который будет слушать приложение
-
-    "port": 777
-***
-
-#### favicon[optional]
-`{String}`
-
-Путь до favicon (относительно `rootPath`)
-
-    "favicon": "./favicon.ico"
-***
-
-#### requirejs[optional]
+#### requirejs
 `{Object}`
 
 Конфигурация `requirejs`
