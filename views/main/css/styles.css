@@ -51,6 +51,8 @@ html, body{
    position: relative;
 }
 .view-main__footer{
+   z-index: 1;
+   position: relative;
    margin-top: -45px;
 }
 .view-main__navBar__leftSide{
