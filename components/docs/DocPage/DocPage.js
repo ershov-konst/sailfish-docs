@@ -4,7 +4,8 @@ define("js!docs.DocPage", ["js!CompoundComponent", "html!docs.DocPage", "jquery"
       _options: {
          isIndexPage: false,
          activeLink: "",
-         markdown: ""
+         markdown: "",
+         sfInfo : {}
       },
       init: function(){
          this._super.apply(this, arguments);

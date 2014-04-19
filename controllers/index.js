@@ -89,15 +89,38 @@ function sendRes(req, res){
    });
 }
 
-function getIndexHTML(cb){
+function getSailfishInfo(cb){
+   var
+      sfPath = path.join(process.cwd(), 'node_modules/sailfish'),
+      packageJSON = require(path.join(sfPath, 'package.json')),
+      result = {};
 
+   result.version = packageJSON.version;
+
+   fs.readFile(path.join(sfPath, 'CHANGELOG.md'), 'utf8',function(err, text){
+      var buffer;
+      if (!err){
+         buffer = /^##.*\n([\s\S]*)(##)?/.exec(text);
+         result.changelog = marked(buffer ? buffer[1] : '');
+
+      }
+      else {
+         result.changelog = 'error: changelog parsing error';
+      }
+      cb(result);
+   });
 }
 
 module.exports = {
    index : function(req, res){
-      res.render("main", {
-         title : "sailfish.js",
-         content : new Component("docs.DocPage", {isIndexPage: true})
+      getSailfishInfo(function(sfInfo){
+         res.render("main", {
+            title : "sailfish.js",
+            content : new Component("docs.DocPage", {
+               isIndexPage: true,
+               sfInfo : sfInfo
+            })
+         });
       });
    },
    getMarkup: function(req, res){

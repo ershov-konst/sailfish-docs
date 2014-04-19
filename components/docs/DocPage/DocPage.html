@@ -30,7 +30,9 @@
       </component>
    </div>
    <div class="doc-DocPage__right">
-      <component data-component="docs.MainPage" class="doc-DocPage__mainPageContent" name="mainPage"></component>
+      <component data-component="docs.MainPage" class="doc-DocPage__mainPageContent" name="mainPage">
+         <sfInfo:ref>{{@it.sfInfo}}</sfInfo>
+      </component>
       <component data-component="docs.DocView" class="doc-DocPage__docContent" name="md">
          <markdown>{{=it.markdown || ' '}}</markdown>
       </component>
