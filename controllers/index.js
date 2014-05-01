@@ -4,7 +4,7 @@ var
    path = require("path"),
    fs = require("fs"),
    docs = require('../lib/docs'),
-   dot = require('dot'),
+   dot = require('sailfish').doT,
    tplPath = path.resolve(__dirname, '../lib'),
    dotDef = {
       include: function(tpl){
