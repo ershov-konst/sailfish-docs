@@ -100,7 +100,7 @@ function getSailfishInfo(cb){
    fs.readFile(path.join(sfPath, 'CHANGELOG.md'), 'utf8',function(err, text){
       var buffer;
       if (!err){
-         buffer = /^##.*\n([\s\S]*)(##)?/.exec(text);
+         buffer = /^##.*\n([^#]*)/.exec(text);
          result.changelog = marked(buffer ? buffer[1] : '');
 
       }
