@@ -6,6 +6,8 @@
       "express": "latest",
       "jsdoc" : "3.3.0-alpha3",
       "marked" : "latest",
-      "sailfish": "latest"
+      "sailfish": "latest",
+      "i18n": "latest",
+      "cookie-parser": "latest"
    }
 }
