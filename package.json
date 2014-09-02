@@ -4,7 +4,7 @@
    "main": "./app.js",
    "dependencies" : {
       "express": "latest",
-      "jsdoc" : "3.3.0-alpha3",
+      "jsdoc" : "3.3.0-alpha9",
       "marked" : "latest",
       "sailfish": "latest",
       "i18n": "latest",
